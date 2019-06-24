@@ -1,0 +1,16 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "nodeDbg",
+      "name": "deviceUSBBridge",
+      "project": "deviceUSBBridge"
+    },
+    {
+      "type": "nodeDbg",
+      "name": "server.js",
+      "project": "deviceUSBBridge\\server.js"
+    }
+  ]
+}
