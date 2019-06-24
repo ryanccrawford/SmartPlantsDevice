@@ -1,0 +1,3 @@
+C:\Users\ryan\Source\Repos\SmartPlantsDevice\deviceUSBBridge\obj\Debug\deviceUSBBridge.njsprojAssemblyReference.cache
+C:\Users\ryan\Source\Repos\SmartPlantsDevice\deviceUSBBridge\obj\Debug\deviceUSBBridge.njsproj.CoreCompileInputs.cache
+C:\Users\ryan\Source\Repos\SmartPlantsDevice\deviceUSBBridge\bin\Microsoft.NodejsTools.WebRole.dll

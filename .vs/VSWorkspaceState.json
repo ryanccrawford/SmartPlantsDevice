@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\deviceUSBBridge",
+    "\\deviceUSBBridge\\bin",
+    "\\deviceUSBBridge\\obj",
+    "\\deviceUSBBridge\\obj\\Debug",
+    "\\deviceUSBBridge\\obj\\Release"
+  ],
+  "SelectedNode": "\\deviceUSBBridge\\package.json",
+  "PreviewInSolutionExplorer": false
+}
