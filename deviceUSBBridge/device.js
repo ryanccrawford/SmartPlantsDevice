@@ -6,7 +6,7 @@ function J5(cb) {
     var bord = this
     this.lightVal = 0.00
     this.soilVal = 0.00
-    this.tempVal = 0.00
+    this.tempVal 
     board = new five.Board({ port: "COM8" })
    
     this.setLight = function(val) {
@@ -38,17 +38,26 @@ function J5(cb) {
             controller: "LM35",
             pin: "A2"
         })
+        
+        var relay = new five.Relay({
+            pin: 2
+        });
         photoresistor.on("data", function () {
             console.log("The Light Sensor data: " + this.value);
             bord.setLight(this.value)
         })
         soilMoisture.on("data", function () {
             console.log("Soil Moisture data: " + this.value);
+            if (this.value > 250) {
+                relay.close();
+            } else {
+                relay.open();
+            }
             bord.setSoil(this.value)
         })
         tempsensor.on("data", function () {
             console.log("Temp data: " + this.value);
-            bord.setTemp(this.value / 2)
+            bord.setTemp(this)
         })
 
         cb(this)
