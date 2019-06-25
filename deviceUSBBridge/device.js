@@ -75,25 +75,27 @@ function J5(confg, cb) {
             pin: "A2"
         })
         
-     //   var relay = new five.Relay({
-    //        pin: 2
-    //    });
-     //   function r(state) {
-         //   if (state === "open") {
-              //  relay.open();
-         //   } else {
-               // relay.close();
-          //  }
-     //   }
+        var relay = new five.Relay({
+         type: "NO",
+        pin: 2
+     });
+        relay.close()
+     function r(state) {
+           if (state === "open") {
+               relay.open();
+           } else {
+               relay.close();
+           }
+       }
 
         photoresistor.on("data", function () {
             bord.setLight(this.value)
         })
         soilMoisture.on("data", function () {
-            if (this.value > 250) {
-               // r("close");
+            if (this.value > 350) {
+               r("close");
             } else {
-              //  r("open");
+               r("open");
             }
             bord.setSoil(this.value)
         })
